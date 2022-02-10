@@ -1,6 +1,5 @@
 import React from 'react';
 import AboutScoreboard from './components/AboutScoreboard';
-import { useTable } from 'react-table';
 
 const Scoreboard = () => {
     return (

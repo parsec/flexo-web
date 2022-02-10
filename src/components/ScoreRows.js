@@ -1,4 +1,3 @@
-import { useTable } from 'react-table';
 import ScoreRow from './ScoreRow';
 
 const ScoreRows = () => {
