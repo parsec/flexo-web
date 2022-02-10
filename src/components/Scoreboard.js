@@ -1,6 +1,6 @@
 import React from 'react';
-import AboutScoreboard from './components/AboutScoreboard';
-import ScoreRows from './components/ScoreRows';
+import AboutScoreboard from './AboutScoreboard';
+import ScoreRows from './ScoreRows';
 import { useTable } from 'react-table';
 
 const Scoreboard = () => {
@@ -12,6 +12,4 @@ const Scoreboard = () => {
     );
 }
 
-export default function Scoreboard({ columns, data }) {
-    
-}
+export default Scoreboard;
