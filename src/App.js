@@ -6,6 +6,7 @@ function App() {
     <Router>
       <div className="container">
         <Header />
+        <Route path='/Home' component={ Home } />
       </div>
     </Router>
   );
