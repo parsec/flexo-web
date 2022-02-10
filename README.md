@@ -1,6 +1,6 @@
 <div align="center>
 
-<img src="./public/flexo.png" align="center">
+<img src="./public/flexo.png" align="center" />
 
 # Flexo Web
 
