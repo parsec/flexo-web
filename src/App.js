@@ -4,8 +4,16 @@ import Home from './components/Home';
 import Scoreboard from './components/Scoreboard';
 import Events from './components/Events';
 import Reports from './components/Reports';
+import Login from './components/Auth/Login';
+import useToken from './useToken';
+
 
 function App() {
+  const { token, setToken } = useToken();
+
+  if(!token) {
+    return <Login setToken={setToken} />
+  }
   return (
     <Router>
       <div className="container">
