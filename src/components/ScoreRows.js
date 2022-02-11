@@ -1,6 +1,6 @@
 import ScoreRow from './ScoreRow';
 import { getAllTeamsReport } from '../util/api';
-//import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const ScoreRows = () => {
     /*const  { allTeamsData, setAllTeamsData } = useState([]);
@@ -15,14 +15,35 @@ const ScoreRows = () => {
         )
         return () => mounted = false;
     }, [])*/
-    const allTeamsData = getAllTeamsReport('NASTIOnesTeRoAdG').json()
+    //const allTeamsData = getAllTeamsReport('NASTIOnesTeRoAdG').json()
 
-    console.log(allTeamsData)
+    const [scores, setScores] = useState([]);
+
+    useEffect(() => {
+        const getScores = async () => {
+            const scoresFromFlexo = await fetchScores()
+            setScores(scoresFromFlexo)
+        }
+        getScores()
+    }, []);
+
+    // Fetch Scores
+    const fetchScores = async () => {
+        const res = await fetch('https://dev-api.flexo.wtf/report/teams', {
+            'method': 'GET',
+            'headers': {
+                'Authorization': 'Bearer NASTIOnesTeRoAdG'
+            }
+        })
+        const data = await res.json()
+
+        console.log(data)
+        return data
+    } 
+
     return(
         <>
-            {allTeamsData.map((team) => (
-                <ScoreRow key={team.Team.ID} team={team}/>
-            ))}
+                <ScoreRow key={scores.Team.ID} team={scores}/>
         </>
     );
 }
