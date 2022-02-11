@@ -1,32 +1,27 @@
 import ScoreRow from './ScoreRow';
+import { getAllTeamsReport } from '../util/api';
+import { useEffect, useState } from 'react';
 
 const ScoreRows = () => {
-    const scorerows = [
-        {
-            teamId: 1,
-            score: 127
-        },
-        {
-            teamId: 2,
-            score: 420
-        },
-        {
-            teamId: 3,
-            score: 69
-        },
-        {
-            teamId: 4,
-            score: 20
-        },
-        {
-            teamId: 5,
-            score: 7
-        }
-    ]
+    /*const  { allTeamsData, setAllTeamsData } = useState([]);
+    useEffect( () => {
+        let mounted = true;
+        getAllTeamsReport('NASTIOnesTeRoAdG').then(
+            items => {
+                if(mounted) {
+                    setAllTeamsData(items)
+                }
+            }
+        )
+        return () => mounted = false;
+    }, [])*/
+    const allTeamsData = getAllTeamsReport('NASTIOnesTeRoAdG')
+
+    console.log(allTeamsData)
     return(
         <>
-            {scorerows.map((scorerowdata) => (
-                <ScoreRow key={scorerowdata.teamId} scorerowdata={scorerowdata}/>
+            {allTeamsData.map((item) => (
+                <ScoreRow key={item.Team.ID} item={item}/>
             ))}
         </>
     );
