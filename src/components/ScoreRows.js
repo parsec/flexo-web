@@ -15,13 +15,13 @@ const ScoreRows = () => {
         )
         return () => mounted = false;
     }, [])*/
-    const allTeamsData = getAllTeamsReport('NASTIOnesTeRoAdG')
+    const allTeamsData = getAllTeamsReport('NASTIOnesTeRoAdG').json()
 
     console.log(allTeamsData)
     return(
         <>
-            {allTeamsData.map((item) => (
-                <ScoreRow key={item.Team.ID} item={item}/>
+            {allTeamsData.map((team) => (
+                <ScoreRow key={team.Team.ID} team={team}/>
             ))}
         </>
     );
