@@ -1,6 +1,6 @@
 import ScoreRow from './ScoreRow';
 import { getAllTeamsReport } from '../util/api';
-import { useEffect, useState } from 'react';
+//import { useEffect, useState } from 'react';
 
 const ScoreRows = () => {
     /*const  { allTeamsData, setAllTeamsData } = useState([]);
