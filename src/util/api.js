@@ -67,7 +67,7 @@ export async function getTargets(secret) {
 }
 
 export async function getAllTeamsReport(secret) {
-    let response = await fetch(`https://cors-anywhere.herokuapp.com/https://dev-app.flexo.wtf/report/teams`, {
+    let response = await fetch(`https://dev-app.flexo.wtf/report/teams`, {
         "method": "GET",
         "headers": {
             "Authorization": "Bearer " + secret
