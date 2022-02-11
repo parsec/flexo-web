@@ -9,9 +9,8 @@ function App() {
       <div className="container">
         <Header />
         <Routes>
-          <Route path='/' render={ (props) => ( <></> )} />
-          <Route path='/Home' component={ Home } />
-          <Route path='/Scoreboard' component={ Scoreboard } />
+          <Route path='/Home' element={ <Home />} />
+          <Route path='/Scoreboard' element={ <Scoreboard /> } />
         </Routes>
       </div>
     </Router> 
