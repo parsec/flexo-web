@@ -39,3 +39,14 @@ $color: $nord5;
 .scoreboardHeader {
     text-align: center;
 }
+
+.scoreboard {
+    padding: 10px;
+    height: max-content;
+}
+
+.footer {
+    bottom: 0px;
+    overflow: auto;
+    //top: 94%;
+}
