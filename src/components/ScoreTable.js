@@ -5,7 +5,19 @@ import BTable from 'react-bootstrap/Table';
 function ScoreTable({columns, data}) {
 
     //Create props for Scoreboard Table
-    const {getTableProps, getTableBodyProps, headerGroups, rows, prepareRow} = useTable({columns, data}, useSortBy)
+    const {getTableProps, getTableBodyProps, headerGroups, rows, prepareRow} = useTable(
+        {
+            columns, 
+            data, 
+    initialState: {
+        sortBy: [
+            {
+                id: 'Score',
+                desc: true
+            }
+        ]
+    }
+}, useSortBy)
   
     // Render Data Table UI
     return (
@@ -16,7 +28,7 @@ function ScoreTable({columns, data}) {
               {headerGroup
                 .headers
                 .map(column => (
-                  <th {...column.getHeaderProps()}>{column.render('Header')}</th>
+                  <th {...column.getHeaderProps(column.getSortByToggleProps())}>{column.render('Header')}</th>
                 ))}
             </tr>
           ))}
