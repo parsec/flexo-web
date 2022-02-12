@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Scoreboard from './components/Scoreboard';
 import Events from './components/Events';
 import Reports from './components/Reports';
+import React from 'react';
 
 function App() {
   return (

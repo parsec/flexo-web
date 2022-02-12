@@ -1,10 +1,13 @@
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
-import Button from 'react-bootstrap/Button';
+import AttackButton from './Attack/AttackButton';
+import React from 'react';
 
 const Header = () => {
-  return (
+    const [modalShow, setModalShow] = React.useState(false);
+  
+    return (
     <header>
         <Navbar bg="dark" variant="dark">
             <Container fluid>
@@ -27,7 +30,7 @@ const Header = () => {
                         <Nav.Link href="/reports">Reports</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
-                <Button variant="danger" type="button">Submit Attack</Button>
+                <AttackButton props="useModal"/>
             </Container>
         </Navbar>
     </header>
