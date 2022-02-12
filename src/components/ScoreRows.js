@@ -40,6 +40,7 @@ const ScoreRows = () => {
         console.log(data)
         return data
     } 
+    console.log(scores)
 
     return(
         <>
