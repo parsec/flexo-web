@@ -14,19 +14,6 @@ const ScoreRows = () => {
         getScores()
     }, [])
 
-    /*const fetchScores = async () => {
-        const res = await fetch('https://dev-api.flexo.wtf/report/teams', {
-            'method': 'GET',
-            'headers': {
-                'Authorization': 'Bearer NASTIOnesTeRoAdG'
-            }
-        })
-        const data = await res.json()
-
-        console.log('fetchScores' + data)
-        return data
-    }*/
-
     console.log('scores' + scores)
 
     return(
