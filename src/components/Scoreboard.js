@@ -25,7 +25,8 @@ const Scoreboard = () => {
         },
         {
             Header: "Score",
-            accessor: "Score"
+            accessor: "Score",
+            sortType: "number"
         }
     ]
     

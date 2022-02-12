@@ -1,11 +1,11 @@
 //import ScoreRow from './ScoreRow';
-import { useTable } from 'react-table';
+import { useTable, useSortBy } from 'react-table';
 import BTable from 'react-bootstrap/Table';
 
 function ScoreTable({columns, data}) {
 
     //Create props for Scoreboard Table
-    const {getTableProps, getTableBodyProps, headerGroups, rows, prepareRow} = useTable({columns, data})
+    const {getTableProps, getTableBodyProps, headerGroups, rows, prepareRow} = useTable({columns, data}, useSortBy)
   
     // Render Data Table UI
     return (
