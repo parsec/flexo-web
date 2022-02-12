@@ -1,8 +1,11 @@
-export async function getTeams(secret) {
-    let response = await fetch(`https://dev-app.flexo.wtf/teams`, {
+const flexoSecret = process.env.REACT_APP_FLEXO_SECRET;
+const flexoURL = process.env.REACT_APP_FLEXO_API;
+
+export async function getTeams() {
+    let response = await fetch(`${flexoURL}/teams`, {
         "method": "GET",
         "headers": {
-            "Authorization": "Bearer " + secret
+            "Authorization": "Bearer " + flexoSecret
         }
     });
 
@@ -15,11 +18,11 @@ export async function getTeams(secret) {
     }
 }
 
-export async function getCategories(secret) {
-    let response = await fetch(`https://dev-app.flexo.wtf/categories`, {
+export async function getCategories() {
+    let response = await fetch(`${flexoURL}/categories`, {
         "method": "GET",
         "headers": {
-            "Authorization": "Bearer " + secret
+            "Authorization": "Bearer " + flexoSecret
         }
     });
 
@@ -32,11 +35,11 @@ export async function getCategories(secret) {
     }
 }
 
-export async function getEvents(secret) {
-    let response = await fetch(`https://dev-app.flexo.wtf/events`, {
+export async function getEvents() {
+    let response = await fetch(`${flexoURL}/events`, {
         "method": "GET",
         "headers": {
-            "Authorization": "Bearer " + secret
+            "Authorization": "Bearer " + flexoSecret
         }
     });
 
@@ -49,11 +52,11 @@ export async function getEvents(secret) {
     }
 }
 
-export async function getTargets(secret) {
-    let response = await fetch(`https://dev-app.flexo.wtf/targets`, {
+export async function getTargets() {
+    let response = await fetch(`${flexoURL}/targets`, {
         "method": "GET",
         "headers": {
-            "Authorization": "Bearer " + secret
+            "Authorization": "Bearer " + flexoSecret
         }
     });
 
@@ -66,11 +69,11 @@ export async function getTargets(secret) {
     }
 }
 
-export async function getAllTeamsReport(secret) {
-    let response = await fetch(`https://dev-app.flexo.wtf/report/teams`, {
+export async function getAllTeamsReport() {
+    let response = await fetch(`${flexoURL}/report/teams`, {
         "method": "GET",
         "headers": {
-            "Authorization": "Bearer " + secret
+            "Authorization": "Bearer " + flexoSecret
         }
     });
 
@@ -83,11 +86,11 @@ export async function getAllTeamsReport(secret) {
     }
 }
 
-export async function getTeamReport(secret, teamID) {
-    let response = await fetch(`https://dev-app.flexo.wtf/report/team/${teamID}`, {
+export async function getTeamReport(teamID) {
+    let response = await fetch(`${flexoURL}/report/team/${teamID}`, {
         "method": "GET",
         "headers": {
-            "Authorization": "Bearer " + secret
+            "Authorization": "Bearer " + flexoSecret
         }
     });
 
