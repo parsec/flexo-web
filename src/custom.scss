@@ -10,8 +10,9 @@ $color: $nord5;
 }
 
 .header {
-    padding: 10px;
+    padding-top: 20px;
 }
+
 .navbar {
     padding: 10px;
     background-color: $nord2;
@@ -19,10 +20,6 @@ $color: $nord5;
 }
 
     .navbar-brand {
-        color: $nord5;
-    }
-
-    .navbar-text {
         color: $nord5;
     }
 
@@ -38,7 +35,3 @@ $color: $nord5;
     .btn-danger {
         background-color: $nord11;
     }
-
-.span {
-    color: $nord5;
-}
