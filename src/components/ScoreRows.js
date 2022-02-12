@@ -17,15 +17,15 @@ const ScoreRows = () => {
     }, [])*/
     //const allTeamsData = getAllTeamsReport('NASTIOnesTeRoAdG').json()
 
-    const [scores, setScores] = useState([]);
-
-    useEffect(() => {
+    const [scores, setScores] = useState(useEffect(() => {
         const getScores = async () => {
             const scoresFromFlexo = await fetchScores()
             setScores(scoresFromFlexo)
         }
         getScores()
-    }, []);
+    }, []));
+
+    
 
     // Fetch Scores
     const fetchScores = async () => {
