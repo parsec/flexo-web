@@ -28,7 +28,7 @@ function ScoreTable({columns, data}) {
               {headerGroup
                 .headers
                 .map(column => (
-                  <th {...column.getHeaderProps(column.getSortByToggleProps())}>{column.render('Header')}</th>
+                  <th {...column.getHeaderProps()}>{column.render('Header')}</th>
                 ))}
             </tr>
           ))}
