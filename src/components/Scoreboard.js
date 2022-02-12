@@ -1,12 +1,43 @@
-import React from 'react';
 import AboutScoreboard from './AboutScoreboard';
-import ScoreRows from './ScoreRows';
+import ScoreTable from './ScoreTable';
+import { getAllTeamsReport } from '../util/api';
+import React, { useEffect, useState } from 'react';
 
 const Scoreboard = () => {
+    const data = require('../testData.json')
+    console.log(data)
+    
+    const [scores, setScores] = useState([]);
+
+    useEffect(() => {
+        const getScores = async () => {
+            const scoresFromServer = await getAllTeamsReport()
+            setScores(scoresFromServer)
+        }
+
+        getScores()
+    }, [])
+    
+    const columns = [
+        {
+            Header: "Team ID",
+            accessor: "Team.team_id"
+        },
+        {
+            Header: "Score",
+            accessor: "Score"
+        }
+    ]
+    
     return (
         <div className="scoreboard">
-            <AboutScoreboard />
-            <ScoreRows />
+            <div className="scoreboardHeader">
+                <AboutScoreboard />
+            </div>
+            <ScoreTable 
+            data={scores}
+            columns={columns}
+            />
         </div>
     );
 }

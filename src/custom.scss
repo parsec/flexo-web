@@ -35,3 +35,18 @@ $color: $nord5;
     .btn-danger {
         background-color: $nord11;
     }
+
+.scoreboardHeader {
+    text-align: center;
+}
+
+.scoreboard {
+    padding: 10px;
+    height: max-content;
+}
+
+.footer {
+    bottom: 0px;
+    overflow: auto;
+    //top: 94%;
+}
