@@ -9,7 +9,7 @@ const ScoreRows = () => {
 
     useEffect(() => {
         const getScores = async () => {
-            const scoresFromServer = await getAllTeamsReport('NASTIOnesTeRoAdG')
+            const scoresFromServer = await getAllTeamsReport()
             setScores(scoresFromServer)
         }
 

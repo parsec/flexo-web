@@ -69,19 +69,11 @@ export async function getTargets() {
     }
 }
 
-<<<<<<< HEAD
-export async function getAllTeamsReport(secret) {
-    const response = await fetch('https://dev-api.flexo.wtf/report/teams', {
-        'method': 'GET',
-        'headers': {
-            'Authorization': 'Bearer ' + secret
-=======
 export async function getAllTeamsReport() {
     let response = await fetch(`${flexoURL}/report/teams`, {
         "method": "GET",
         "headers": {
             "Authorization": "Bearer " + flexoSecret
->>>>>>> staging
         }
     });
 
