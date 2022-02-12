@@ -7,14 +7,14 @@ const ScoreRows = () => {
 
     useEffect(() => {
         const getScores = async () => {
-            const scoresFromServer = await fetchScores()
+            const scoresFromServer = await getAllTeamsReport('NASTIOnesTeRoAdG')
             setScores(scoresFromServer)
         }
 
         getScores()
     }, [])
 
-    const fetchScores = async () => {
+    /*const fetchScores = async () => {
         const res = await fetch('https://dev-api.flexo.wtf/report/teams', {
             'method': 'GET',
             'headers': {
@@ -25,7 +25,7 @@ const ScoreRows = () => {
 
         console.log('fetchScores' + data)
         return data
-    }
+    }*/
 
     console.log('scores' + scores)
 

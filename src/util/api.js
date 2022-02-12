@@ -67,18 +67,17 @@ export async function getTargets(secret) {
 }
 
 export async function getAllTeamsReport(secret) {
-    let response = await fetch(`https://dev-api.flexo.wtf/report/teams`, {
-        "method": "GET",
-        "origin": "https://dev-app.flexo.wtf",
-        "headers": {
-            "Authorization": "Bearer " + secret
+    const response = await fetch('https://dev-api.flexo.wtf/report/teams', {
+        'method': 'GET',
+        'headers': {
+            'Authorization': 'Bearer ' + secret
         }
     });
 
     if (response.ok) {
-        const json = await response.json();
-        console.log(json)
-        return json;
+        const data = await response.json()
+        console.log('getAllTeamsReport: ' + data)
+        return data
     } else {
         alert("HTTP-Error: " + response.status);
     }
