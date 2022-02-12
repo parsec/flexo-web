@@ -6,15 +6,15 @@ import Button from 'react-bootstrap/Button';
 const Header = () => {
   return (
     <header>
-        <Container fluid>
-            <Navbar>
+        <Navbar bg="dark" variant="dark">
+            <Container fluid>
                 <Navbar.Brand href="/home">
                     <img
                     alt="Flexo Home"
                     src="/flexo.png"
-                    width="30"
-                    height="35"
-                    className="d-inline-block align-top"
+                    width="50"
+                    height="65"
+                    className="align-left"
                     />{' '}
                 Flexo Web
                 </Navbar.Brand>
@@ -28,8 +28,8 @@ const Header = () => {
                     </Nav>
                 </Navbar.Collapse>
                 <Button variant="danger" type="button">Submit Attack</Button>
-            </Navbar>
-        </Container>
+            </Container>
+        </Navbar>
     </header>
   )
 }
