@@ -1,20 +1,34 @@
 @import "/node_modules/nord/src/sass/nord.scss";
 
 $body-bg: $nord0;
+$color: $nord5;
 
 @import "~bootstrap/scss/bootstrap.scss";
 
+* {
+    color: $nord5;
+}
+
 .header {
     padding: 10px;
-    background-color: $nord2;
 }
-    .navbar {
-        padding: 10px;
+.navbar {
+    padding: 10px;
+    background-color: $nord2;
+    color: $nord5;
+}
 
+    .navbar-brand {
+        color: $nord5;
     }
 
-    .nav {
+    .navbar-text {
+        color: $nord5;
+    }
+
+    .navbar-nav {
         float: left;
+        color: $nord5;
     }
 
     .btn {

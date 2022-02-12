@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header>
         <Container fluid>
-            <Navbar>
+            <Navbar bg="dark" variant="dark">
                 <Navbar.Brand href="/home">
                     <img
                     alt="Flexo Home"
