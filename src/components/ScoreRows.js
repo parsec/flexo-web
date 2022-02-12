@@ -17,15 +17,31 @@ const ScoreRows = () => {
     }, [])*/
     //const allTeamsData = getAllTeamsReport('NASTIOnesTeRoAdG').json()
 
-    const [scores, setScores] = useState(useEffect(() => {
+    const [scores, setScores] = useState([]);
+
+    useEffect(() => {
+        const fetchScores = async () => {
+            const res = await fetch('https://dev-api.flexo.wtf/report/teams', {
+                'method': 'GET',
+                'headers': {
+                    'Authorization': 'Bearer NASTIOnesTeRoAdG'
+                }
+            })
+            const data = await res.json()
+
+            console.log('fetchScores' + data)
+        }
+
+        fetchScores()
+    }, [])
+
+    /*useEffect(() => {
         const getScores = async () => {
             const scoresFromFlexo = await fetchScores()
             setScores(scoresFromFlexo)
         }
         getScores()
-    }, []));
-
-    
+    }, []);
 
     // Fetch Scores
     const fetchScores = async () => {
@@ -39,13 +55,14 @@ const ScoreRows = () => {
 
         console.log(data)
         return data
-    } 
-    console.log(scores)
+    } */
+    //console.log(scores)
 
     return(
-        <>
+        /*<>
                 <ScoreRow key={scores.Team.ID} team={scores}/>
-        </>
+        </>*/
+        <></>
     );
 }
 
