@@ -1,8 +1,7 @@
-const ScoreRow = ({ teamScoreData }) => {
+const ScoreRow = ({ team }) => {
   return (
     <div className="scorerow">
-        <div className="teamId">Team: { teamScoreData.Team.ID } </div>
-        <div className="teamScore">{ teamScoreData.Score }</div>
+        <div className="teamId">Team: { team.Team.ID }, Score: { team.Score }</div>
     </div>
   );
 }
