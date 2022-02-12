@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Scoreboard from './components/Scoreboard';
 import Events from './components/Events';
 import Reports from './components/Reports';
+import Teams from './components/Teams/Teams';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path='/' element={ <Scoreboard /> } />
           <Route path='/Home' element={ <Home />} />
           <Route path='/Scoreboard' element={ <Scoreboard /> } />
+          <Route path='/Teams' element={ <Teams /> } />
           <Route path='/Events' element={ <Events /> } />
           <Route path='/Reports' element= { <Reports /> } />
         </Routes>
