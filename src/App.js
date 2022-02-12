@@ -5,6 +5,7 @@ import Scoreboard from './components/Scoreboard';
 import Events from './components/Events';
 import Reports from './components/Reports';
 import Teams from './components/Teams/Teams';
+import Categories from './components/Categories/Categories';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/Home' element={ <Home />} />
           <Route path='/Scoreboard' element={ <Scoreboard /> } />
           <Route path='/Teams' element={ <Teams /> } />
+          <Route path='/Categories' element={ <Categories /> } />
           <Route path='/Events' element={ <Events /> } />
           <Route path='/Reports' element= { <Reports /> } />
         </Routes>
