@@ -1,4 +1,5 @@
-import { flexoSecret, flexoURL } from '../index.js';
+const flexoSecret = process.env.REACT_APP_FLEXO_SECRET;
+const flexoURL = process.env.REACT_APP_FLEXO_API;
 
 export async function getTeams() {
     let response = await fetch(`${flexoURL}/teams`, {

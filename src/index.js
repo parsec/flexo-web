@@ -4,9 +4,6 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const $flexoSecret = process.env.REACT_APP_FLEXO_SECRET;
-const $flexoURL = process.env.REACT_APP_FLEXO_API;
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
