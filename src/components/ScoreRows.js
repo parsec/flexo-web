@@ -14,8 +14,6 @@ const ScoreRows = () => {
         getScores()
     }, [])
 
-    console.log('scores' + scores)
-
     return(
         <>
         {scores.map((tscore) => (
