@@ -20,6 +20,10 @@ const Scoreboard = () => {
     
     const columns = [
         {
+            Header: "Abbrev",
+            accessor: "Team.abbrev"
+        },
+        {
             Header: "Team ID",
             accessor: "Team.team_id"
         },
