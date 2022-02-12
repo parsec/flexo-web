@@ -8,8 +8,8 @@ import Reports from './components/Reports';
 function App() {
   return (
     <Router>
+      <Header />
       <div className="container">
-        <Header />
         <Routes>
           <Route path='/' element={ <Scoreboard /> } />
           <Route path='/Home' element={ <Home />} />
