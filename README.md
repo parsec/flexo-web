@@ -22,4 +22,35 @@
 
 ## Overview
 
-// todo ;)
+This is Flexo Web, the web frontend for the [SECCDC's Flexo scoring engine](https://github.com/seccdc/flexo)! The scoring engine is used to log attacks by the red teamers and keep track of what attacks have been performed on what teams. And this is it's frontend, written in React.js!
+
+---
+
+## Building flexo-web
+
+So, since we're trying to actually be vaguely secure here, to build the app you'll need to set two environment variables in a `.env.development.local` file at the root directory (right here where the README is!)
+
+```text
+REACT_APP_FLEXO_API="https://some.url.tld/"
+REACT_APP_FLEXO_SECRET="SOME-JWT-TOKEN-STRING"
+```
+
+Once you have that file (and please use that filename since it's in the `.gitignore` already), you're ready to start Flexo Web for development!
+
+I use `yarn`, so the commands are:
+
+```shell
+> yarn
+
+> yarn start
+```
+
+But if you're using `npm`, it's almost exactly the same!
+
+```shell
+> npm i
+
+> npm start
+```
+
+Happy hacking! ;)
