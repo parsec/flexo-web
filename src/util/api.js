@@ -78,9 +78,9 @@ export async function getAllTeamsReport() {
     });
 
     if (response.ok) {
-        let json = await response.json();
-        console.log(json)
-        return json;
+        const data = await response.json()
+        console.log('getAllTeamsReport: ' + data)
+        return data
     } else {
         alert("HTTP-Error: " + response.status);
     }
