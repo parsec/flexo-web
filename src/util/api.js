@@ -1,6 +1,6 @@
 import { flexoSecret, flexoURL } from '../index.js';
 
-export async function getTeams(secret) {
+export async function getTeams() {
     let response = await fetch(`${flexoURL}/teams`, {
         "method": "GET",
         "headers": {
@@ -17,7 +17,7 @@ export async function getTeams(secret) {
     }
 }
 
-export async function getCategories(secret) {
+export async function getCategories() {
     let response = await fetch(`${flexoURL}/categories`, {
         "method": "GET",
         "headers": {
@@ -34,7 +34,7 @@ export async function getCategories(secret) {
     }
 }
 
-export async function getEvents(secret) {
+export async function getEvents() {
     let response = await fetch(`${flexoURL}/events`, {
         "method": "GET",
         "headers": {
@@ -51,7 +51,7 @@ export async function getEvents(secret) {
     }
 }
 
-export async function getTargets(secret) {
+export async function getTargets() {
     let response = await fetch(`${flexoURL}/targets`, {
         "method": "GET",
         "headers": {
@@ -68,11 +68,11 @@ export async function getTargets(secret) {
     }
 }
 
-export async function getAllTeamsReport(secret) {
+export async function getAllTeamsReport() {
     let response = await fetch(`${flexoURL}/report/teams`, {
         "method": "GET",
         "headers": {
-            "Authorization": "Bearer " + secret
+            "Authorization": "Bearer " + flexoSecret
         }
     });
 
@@ -85,11 +85,11 @@ export async function getAllTeamsReport(secret) {
     }
 }
 
-export async function getTeamReport(secret, teamID) {
+export async function getTeamReport(teamID) {
     let response = await fetch(`${flexoURL}/report/team/${teamID}`, {
         "method": "GET",
         "headers": {
-            "Authorization": "Bearer " + secret
+            "Authorization": "Bearer " + flexoSecret
         }
     });
 
