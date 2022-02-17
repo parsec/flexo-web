@@ -6,6 +6,7 @@ import Events from './components/Events';
 import Reports from './components/Reports';
 import Teams from './components/Teams/Teams';
 import Categories from './components/Categories/Categories';
+import './custom.scss';
 
 function App() {
   return (
