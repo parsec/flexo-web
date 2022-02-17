@@ -9,6 +9,10 @@ $color: $nord5;
     color: $nord5;
 }
 
+html, body {
+    background-color: $nord0;
+}
+
 .header {
     padding-top: 20px;
 }
@@ -38,6 +42,14 @@ $color: $nord5;
 
 .scoreboardHeader {
     text-align: center;
+    padding-bottom: 5px;
+}
+
+.scoreboardHeaderContent {
+    border-color: $nord8;
+    border-width: 0.1cm;
+    border-style: solid;
+    border-radius: 25px;
 }
 
 .scoreboard {
