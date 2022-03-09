@@ -102,3 +102,20 @@ export async function getTeamReport(teamID) {
         alert("HTTP-Error: " + response.status);
     }
 }
+
+export async function postEvent(data) {
+    let response = await fetch(`${flexoURL}/events`, {
+        "method": "POST",
+        "headers": {
+            "Authorization": "Bearer " + flexoSecret
+        },
+        "data": data
+    });
+
+    if (response.ok) {
+        return "Attack submission successful."
+    } else {
+        alert("HTTP-Error: " + response.status)
+        return "Attack submission unsuccessful. Reason: " + response.status
+    }
+}
