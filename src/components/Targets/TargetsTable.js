@@ -1,7 +1,7 @@
 import { useTable, useSortBy } from 'react-table';
 import BTable from 'react-bootstrap/Table';
 
-function ScoreTable({columns, data}) {
+function TargetsTable({columns, data}) {
 
     //Create props for Scoreboard Table
     const {getTableProps, getTableBodyProps, headerGroups, rows, prepareRow} = useTable({columns, data}, useSortBy)
@@ -38,4 +38,4 @@ function ScoreTable({columns, data}) {
     )
 }
 
-export default ScoreTable;
+export default TargetsTable;
