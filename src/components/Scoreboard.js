@@ -20,6 +20,8 @@ const Scoreboard = () => {
         const interval=setInterval (() => {
             getScores()
         }, 10000)
+
+        return()=>clearInterval(interval)
     }, [])
     
     const columns = [
