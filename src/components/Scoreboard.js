@@ -19,7 +19,7 @@ const Scoreboard = () => {
 
         const interval=setInterval (() => {
             getScores()
-        }, 10000)
+        }, 60000)
 
         return()=>clearInterval(interval)
     }, [])
